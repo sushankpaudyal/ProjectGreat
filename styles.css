@@ -1,4 +1,4 @@
-/* Focus states for * {
+ Focus states for * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -148,7 +148,7 @@ button {
     box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
 }
 
-/* Mobile responsiveness */
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
