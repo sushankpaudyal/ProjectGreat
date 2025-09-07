@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boba Drops Application Form</title>
+    <title>Student Study Habits Survey</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>🧋 Boba Drops Application</h1>
-        <p class="subtitle">Apply for your chance to get free boba!</p>
+        <h1>📚 Study Habits Survey</h1>
+        <p class="subtitle">Help us understand how students learn best!</p>
 
         <form>
             <div class="form-group">
@@ -23,106 +23,175 @@
             </div>
 
             <div class="form-group">
-                <label for="age">Age:</label>
-                <select id="age" name="age" required>
-                    <option value="">Select your age range</option>
-                    <option value="under-13">Under 13</option>
-                    <option value="13-15">13-15</option>
-                    <option value="16-18">16-18</option>
+                <label for="grade">Grade Level:</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select your grade</option>
+                    <option value="6th">6th Grade</option>
+                    <option value="7th">7th Grade</option>
+                    <option value="8th">8th Grade</option>
+                    <option value="9th">9th Grade (Freshman)</option>
+                    <option value="10th">10th Grade (Sophomore)</option>
+                    <option value="11th">11th Grade (Junior)</option>
+                    <option value="12th">12th Grade (Senior)</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="website">Your Website URL:</label>
-                <input type="url" id="website" name="website" placeholder="https://yoursite.com" required>
+                <label for="school">School Name:</label>
+                <input type="text" id="school" name="school" placeholder="Enter your school name" required>
             </div>
 
             <div class="form-group">
-                <label>Are you a high school student or younger?</label>
+                <label>What is your preferred study time?</label>
                 <div class="radio-group">
                     <div class="radio-item">
-                        <input type="radio" id="student-yes" name="student" value="yes" required>
-                        <label for="student-yes">Yes, I'm in high school or younger</label>
+                        <input type="radio" id="morning" name="study-time" value="morning" required>
+                        <label for="morning">Early morning (6-9 AM)</label>
                     </div>
                     <div class="radio-item">
-                        <input type="radio" id="student-no" name="student" value="no">
-                        <label for="student-no">No, I'm older</label>
+                        <input type="radio" id="afternoon" name="study-time" value="afternoon">
+                        <label for="afternoon">Afternoon (12-5 PM)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="evening" name="study-time" value="evening">
+                        <label for="evening">Evening (6-9 PM)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="night" name="study-time" value="night">
+                        <label for="night">Late night (10 PM+)</label>
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Is your website recently made?</label>
+                <label>Where do you usually study?</label>
                 <div class="radio-group">
                     <div class="radio-item">
-                        <input type="radio" id="recent-yes" name="recent" value="yes" required>
-                        <label for="recent-yes">Yes, made recently</label>
+                        <input type="radio" id="bedroom" name="study-location" value="bedroom" required>
+                        <label for="bedroom">My bedroom</label>
                     </div>
                     <div class="radio-item">
-                        <input type="radio" id="recent-no" name="recent" value="no">
-                        <label for="recent-no">No, it's older</label>
+                        <input type="radio" id="library" name="study-location" value="library">
+                        <label for="library">School/Public library</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="living-room" name="study-location" value="living-room">
+                        <label for="living-room">Living room/Kitchen table</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="coffee-shop" name="study-location" value="coffee-shop">
+                        <label for="coffee-shop">Coffee shop/Cafe</label>
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Your website includes (check all that apply):</label>
+                <label>What subjects do you find most challenging? (check all that apply):</label>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
-                        <input type="checkbox" id="has-text" name="features" value="text">
-                        <label for="has-text">Text content</label>
+                        <input type="checkbox" id="math" name="challenging-subjects" value="math">
+                        <label for="math">Mathematics</label>
                     </div>
                     <div class="checkbox-item">
-                        <input type="checkbox" id="has-color" name="features" value="color">
-                        <label for="has-color">Colors</label>
+                        <input type="checkbox" id="science" name="challenging-subjects" value="science">
+                        <label for="science">Science (Biology, Chemistry, Physics)</label>
                     </div>
                     <div class="checkbox-item">
-                        <input type="checkbox" id="has-image" name="features" value="image">
-                        <label for="has-image">Images</label>
+                        <input type="checkbox" id="english" name="challenging-subjects" value="english">
+                        <label for="english">English/Literature</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="history" name="challenging-subjects" value="history">
+                        <label for="history">History/Social Studies</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="language" name="challenging-subjects" value="language">
+                        <label for="language">Foreign Languages</label>
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Have you received Boba Drops before?</label>
+                <label for="study-hours">Average hours spent studying per day:</label>
+                <select id="study-hours" name="study-hours" required>
+                    <option value="">Select hours</option>
+                    <option value="less-1">Less than 1 hour</option>
+                    <option value="1-2">1-2 hours</option>
+                    <option value="2-3">2-3 hours</option>
+                    <option value="3-4">3-4 hours</option>
+                    <option value="more-4">More than 4 hours</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What study methods work best for you? (check all that apply):</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="flashcards" name="study-methods" value="flashcards">
+                        <label for="flashcards">Flashcards</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="notes" name="study-methods" value="notes">
+                        <label for="notes">Taking detailed notes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="group-study" name="study-methods" value="group-study">
+                        <label for="group-study">Group study sessions</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="practice-tests" name="study-methods" value="practice-tests">
+                        <label for="practice-tests">Practice tests/quizzes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="online-videos" name="study-methods" value="online-videos">
+                        <label for="online-videos">Online videos/tutorials</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Do you use any study apps or digital tools?</label>
                 <div class="radio-group">
                     <div class="radio-item">
-                        <input type="radio" id="previous-no" name="previous" value="no" required>
-                        <label for="previous-no">No, this is my first time</label>
+                        <input type="radio" id="apps-yes" name="use-apps" value="yes" required>
+                        <label for="apps-yes">Yes, regularly</label>
                     </div>
                     <div class="radio-item">
-                        <input type="radio" id="previous-yes" name="previous" value="yes">
-                        <label for="previous-yes">Yes, I've received it before</label>
+                        <input type="radio" id="apps-sometimes" name="use-apps" value="sometimes">
+                        <label for="apps-sometimes">Sometimes</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="apps-no" name="use-apps" value="no">
+                        <label for="apps-no">No, I prefer traditional methods</label>
                     </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="location">State/Location (USA only):</label>
-                <input type="text" id="location" name="location" placeholder="e.g., California" required>
-            </div>
-
-            <div class="form-group">
-                <label for="description">Tell us about your website:</label>
-                <textarea id="description" name="description" placeholder="Describe what makes your website special..."></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="boba-flavor">Favorite Boba Flavor:</label>
-                <select id="boba-flavor" name="boba-flavor">
-                    <option value="">Choose your favorite</option>
-                    <option value="taro">Taro</option>
-                    <option value="brown-sugar">Brown Sugar Milk Tea</option>
-                    <option value="thai">Thai Tea</option>
-                    <option value="matcha">Matcha</option>
-                    <option value="honeydew">Honeydew</option>
-                    <option value="strawberry">Strawberry</option>
-                    <option value="classic">Classic Black Tea</option>
+                <label for="study-goal">What is your main academic goal this year?</label>
+                <select id="study-goal" name="study-goal" required>
+                    <option value="">Choose your goal</option>
+                    <option value="improve-grades">Improve overall grades</option>
+                    <option value="college-prep">Prepare for college applications</option>
+                    <option value="specific-subject">Master a specific subject</option>
+                    <option value="test-prep">Prepare for standardized tests</option>
+                    <option value="time-management">Better time management</option>
+                    <option value="study-skills">Develop better study skills</option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="challenges">What are your biggest study challenges? (optional)</label>
+                <textarea id="challenges" name="challenges" placeholder="Describe any difficulties you face while studying..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-info">Any additional comments or suggestions?</label>
+                <textarea id="additional-info" name="additional-info" placeholder="Share anything else you'd like us to know..."></textarea>
             </div>
 
             <div class="button-group">
-                <button type="submit" class="submit-btn">Submit Application</button>
+                <button type="submit" class="submit-btn">Submit Survey</button>
                 <button type="reset" class="reset-btn">Clear Form</button>
             </div>
         </form>
